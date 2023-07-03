@@ -80,7 +80,7 @@ margin: 0 auto;
 .header {
 border-bottom: 1px solid #E7E9FC;
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
-    
+  
 }
 
 .header-navigation {
@@ -94,7 +94,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     display: flex;
     
         align-items: center;
-        /* justify-content: space-between;     */
+        justify-content: space-between;    
     align-items: center;
     
     
@@ -123,89 +123,146 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
     color: var(--primary-black-color);
 }
-
 .header-menu {
-    list-style-type: none;
-    display:flex;
-    align-items: center;
-        gap: 40px;
-        
-      
+    display: none;
 }
-
-
-
-.active::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 4px;
-    left: 0;
-    bottom: 0;
-    background-color: #404bbf;
-    border-radius: 2px;
-    bottom: -1px;
-}
-
-
-
-.header-menu-item {
-  
-}
-
-.header-menu-link {
-    font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        color: var(--primary-black-color);
-        padding-top: 24px;
-        padding-bottom: 24px;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.active {
-    position: relative;
-color: #404bbf;
-}
-.header-menu-link:hover, .header-menu-link:focus {
-    color: #404BBF;
-}
-
-.header-menu-item::after {
-    display: flex;
-    background-color: #404bbf;
-    width: 48px;
-    height: 4px;
-}
-
 .contacts {
-    font-style: normal;
+    display: none;
+}
+
+/* -----------------MOB MENU-------------------------- */
+
+.open-menu-btn {
+    min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+.mob-menu-svg {
+    stroke: #2E2F42;
+}
+.mob-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    position: fixed;
+    width: 100vw;
+    /* max-width: 428px; */
+    height: 100vh;
+    top: 0;
+    z-index: 2;
+    background: var(--white, #FFF);
+box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+padding:  24px 24px 40px 40px;
+}
+.close-menu-btn {
+    display: block;
     margin-left: auto;
 }
-.contacts-list {
+.mob-btn {
     display: flex;
-    gap: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    align-items: center; 
+    justify-content: center;
+    background: #FFF;
+        border: 1px solid #E7E9FC;
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+            position: absolute;
+            border-radius: 50% 50%;
+            right: 24px;
+            top: 24px;
+            padding: 0; 
+            cursor: pointer;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);   
+            border-radius: 24px;
+            
+            /* opacity: 0.10000000149011612; */
+            
+        }
+.close-mob-icon {
+    fill: #2E2F42;
+}
+.mob-menu-list {
+    margin-top: 32px;
+    /* margin-bottom: 284px; */
     
 }
-
-.contacts-item {}
-
-.contacts-link {
-    font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        color: var(--secondary-black-color);
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+.mob-menu-item {
+    margin-bottom: 40px;
 }
-.contacts-link:hover, .contacts-link:focus {
-    color: #404BBF; 
+
+.mob-menu-link {
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+line-height: 40px;
+letter-spacing: 0.72px;
+text-transform: capitalize;
 }
+.active {
+    color: #404bbf;
+}
+.mob-contacts {
+}
+.mob-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 48px;
+}
+.mob-contacts-item {
+   
+   
+   
+}
+.mob-contacts-tel {
+    color: #4D5AE5;
+
+font-size: 36px;
+font-weight: 700;
+line-height: 40px;
+font-style: normal;
+letter-spacing: 0.72px;
+text-transform: capitalize;
+}
+
+.mob-contacts-email {
+    color: var(--slate, #434455);
+  
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+}
+.mob-social-list {
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    gap: 56px;
+}
+.mob-social-item {
+}
+.mob-social-link {
+}
+.footer-social-icon {
+}
+.mob-social-icon {
+}
+
+
 /**----------------------MAIN---------------------------*/
 .hero {
    
@@ -1191,6 +1248,7 @@ color: var(--secondary-black-color)
         width: 100%; 
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+  
 
     /*------------ @@@@@@@@MEDIA@@@@@@@@@@ ---------*/
 
@@ -1213,6 +1271,96 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     } 
         @media screen and (min-width: 768px) {
+            .header-cont {
+                height: 72px;
+            }
+
+            .header-menu {
+                list-style-type: none;
+                display:flex;
+                align-items: center;
+                    gap: 40px;
+                    
+                  
+            }
+            
+            .open-menu-btn {
+                display: none;
+            }
+            
+            .active::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 4px;
+                left: 0;
+                bottom: 0;
+                background-color: #404bbf;
+                border-radius: 2px;
+                bottom: -1px;
+            }
+            
+            
+            
+            .header-menu-item {
+              
+            }
+            
+            .header-menu-link {
+                font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    letter-spacing: 0.02em;
+                    text-decoration: none;
+                    color: var(--primary-black-color);
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .active {
+                position: relative;
+            color: #404bbf;
+            }
+            .header-menu-link:hover, .header-menu-link:focus {
+                color: #404BBF;
+            }
+            
+            .header-menu-item::after {
+                display: flex;
+                background-color: #404bbf;
+                width: 48px;
+                height: 4px;
+            }
+            
+            .contacts {
+            display: flex;
+                font-style: normal;
+                margin-left: auto;
+            }
+            .contacts-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                
+            }
+            
+            .contacts-item {}
+            
+            .contacts-link {
+                font-size: 16px;
+                    line-height: 1.5;
+                    letter-spacing: 0.02em;
+                    text-decoration: none;
+                    color: var(--secondary-black-color);
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+            }
+            .contacts-link:hover, .contacts-link:focus {
+                color: #404BBF; 
+            }
 
        
 .container {
@@ -1335,6 +1483,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
        @media screen and (min-width: 1158px) {
+       
         .container {
            max-width: 1158px; 
         }
@@ -1346,6 +1495,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     margin-top: 120px;
+}
+.team {
+    padding-bottom: 120px;
 }
         .benefits {
            padding: 120px 0; 

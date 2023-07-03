@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- <header class="header">
+     <header class="header">
       <div class="container header-cont">
         <nav class="header-navigation">
           <a class="header-logo link" href="./index.html">
@@ -76,8 +76,127 @@
             </li>
           </ul>
         </address>
+        <button class="open-menu-btn" js-open-menu type="button" aria-expanded="false"
+        aria-controls="mobile-menu">
+          <svg
+                        class="mob-menu-svg" 
+                        width="32"
+                        height="22"
+                      >
+                        <use
+                          href="./images/icons.svg#icon-menu-hamburger"
+                        ></use></svg
+                    >
+        </button>
       </div>
-    </header>  -->
+      <div class="mob-menu is-hidden" js-menu-container id="mobile-menu">
+        <button
+          type="button"
+          class="mob-btn"
+          js-close-menu
+        >
+          <svg class="close-mob-icon" width="8" height="8">
+            <use
+              href="./images/icons.svg#icon-close-black-1"
+            ></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="list link mob-menu-list">
+          <li class="mob-menu-item">
+            <a
+              class="mob-menu-link link active"
+              href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="mob-menu-item">
+            <a
+              class="mob-menu-link link"
+              href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href=""
+              >Contacts</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+      </nav>
+      <address class="mob-contacts">
+        <ul class="mob-contacts-list">
+         
+          <li class="mob-contacts-item">
+            <a
+              class="mob-contacts-tel link"
+              href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mob-contacts-item">
+            <a
+              class="mob-contacts-email link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="mob-social-list">
+        <li class="footer-social-item">
+          <a class="footer-social-link" href=""
+            ><svg
+              class="footer-social-icon"
+              width="24"
+              height="24"
+            >
+              <use
+                href="./images/icons.svg#icon-instagram-2"
+              ></use></svg
+          ></a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-social-link" href=""
+            ><svg
+              class="footer-social-icon"
+              width="24"
+              height="24"
+            >
+              <use
+                href="./images/icons.svg#icon-twitter-1"
+              ></use></svg
+          ></a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-social-link" href=""
+            ><svg
+              class="footer-social-icon"
+              width="24"
+              height="24"
+            >
+              <use
+                href="./images/icons.svg#icon-facebook-1"
+              ></use></svg
+          ></a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-social-link" href=""
+            ><svg
+              class="footer-social-icon"
+              width="24"
+              height="24"
+            >
+              <use
+                href="./images/icons.svg#icon-linkedin-1"
+              ></use></svg
+          ></a>
+        </li>
+      </ul></div>
+      </div>
+    </header>  
 
     <main>
      <section class="hero">
@@ -807,5 +926,12 @@
       </div>
     </div> 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
