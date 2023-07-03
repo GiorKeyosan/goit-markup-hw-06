@@ -1282,7 +1282,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         @media screen and (min-width: 768px) {
             .header-cont {
                 height: 72px;
-                padding-top: 16px;
+                
             }
 
             .header-menu {
@@ -1496,6 +1496,15 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
        
         .container {
            max-width: 1158px; 
+        }
+        .header-cont {
+            margin: 0 16px;
+            justify-content: space-between;
+        }
+        .contacts-list {
+            display: flex;
+            flex-direction: row;
+
         }
      .hero-title {
         margin-bottom: 48px;
