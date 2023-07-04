@@ -51,8 +51,7 @@ img {
  
  .container {
     
-/* padding-left: 15px;
-padding-right: 15px; */
+padding: 0 15px;
 margin: 0 auto; 
 
 
@@ -260,7 +259,7 @@ text-transform: capitalize;
     flex-direction: row;
     
     align-items: center;
-    gap: 56px;
+    gap: 35px;
 }
 .mob-social-item {
 }
@@ -276,7 +275,7 @@ text-transform: capitalize;
 .hero {
    
     /* margin: auto; */
-
+height: 432px;
 background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -287,7 +286,7 @@ background-image: linear-gradient(to bottom,
     background-repeat: no-repeat;
     background-size: cover;
     
-padding: 188px 0;
+padding: 112px 0;
 
 
 }
@@ -354,7 +353,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .benefits {
     /* padding: 120px 0; desktop*/
-padding: 96px 16px;
+padding: 96px 0;
 display: flex;
 justify-content: center;
 
@@ -466,7 +465,7 @@ color: var(--primary-black-color);
     padding-top: 96px;
         display: flex;
     justify-content: center;
-align-items: center;
+align-items: center; */
 }
 .team-container {
    
@@ -622,7 +621,7 @@ font-weight: 700;
     align-items: center;
     flex-wrap: wrap;
     flex-basis: calc((100% - 16px) / 2);
-    gap: 16px;
+    gap: 72px 16px;
     
     
    
@@ -654,7 +653,7 @@ font-weight: 700;
 
 /**-----------------------FOOTER--------------------------*/
 .footer {
-    display: flex;
+    
     background-color: var(--primary-black-color);
     padding: 100px 0;
 }
@@ -757,7 +756,7 @@ font-weight: 700;
 }
 
 .footer-form {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -780,7 +779,7 @@ font-weight: 700;
 .subscribe-input {
    
     padding-left: 16px;
-   width: 398px;
+   width: 100%;
    
     
         height: 40px;
@@ -837,6 +836,8 @@ color: var(--white, #FFF);
         background: #4D5AE5;
         
             padding-left: 24px;
+            margin: 0 auto;
+            margin-top: 16px;
             
                 display: flex;
             align-items: center;
@@ -1263,7 +1264,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 428px ) {
         .container {
-            max-width: 396px;
+            max-width: 428px;
             
         }
         .benefits {
@@ -1360,7 +1361,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
             .contacts-item {}
             
             .contacts-link {
-                font-size: 16px;
+                font-size: 12px;
                     line-height: 1.5;
                     letter-spacing: 0.02em;
                     text-decoration: none;
@@ -1413,17 +1414,27 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
                 .benefits-list {
                     flex-direction: row;
                     flex-wrap: wrap;
-                    gap: 24px;
+                    gap: 72px 24px;
                 }
 
+                .benefits-item-subtitle {
+                    text-align: left;
+                }
+
+                .team {
+                   
+                    padding-top: 96px;
+                    padding-bottom: 96px;
+                     
+                }        
        .team-list {
         display: flex;
-       gap:24px;
+       gap:72px 24px;
         justify-content: center;
        }
        .team-list-item {
        
-         margin-bottom: 40px;
+         margin-bottom: 0;
        }
        .customers-item-container {
         max-width: 168px;
@@ -1472,21 +1483,25 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         text-align: left;
     }
     .subscribe {
-        display: block;
+        
         margin-top: 72px;
     }
     .subscribe-text {
         text-align: left;
     }
 .footer-form {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: left;
+    /align-items: flex-start; 
+    justify-content: left; 
     
 }
 .subscribe-input {
     width: 264px;
    
+}
+.subscribe-submit-button {
+    margin: 0;
 }
 
 
@@ -1499,16 +1514,32 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         .header-cont {
             margin: 0 16px;
-            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;    
+        align-items: center;
         }
         .contacts-list {
             display: flex;
             flex-direction: row;
+           
 
+        }
+        .contacts-link {
+            font-size: 16px;
         }
      .hero-title {
         margin-bottom: 48px;
      }
+     .hero {
+        margin:0 auto;
+        padding: 188px 0;
+        height: 600px;
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-1.jpg);
+    }
 
 .activity {
     display: flex;
@@ -1570,6 +1601,7 @@ padding: 120px 0;
         flex-wrap: nowrap;
         margin: auto;
     }
+   
     .logo-container {
         margin-right: 120px;
     }
