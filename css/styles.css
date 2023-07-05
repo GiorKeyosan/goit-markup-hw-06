@@ -1533,10 +1533,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
            max-width: 1158px; 
         }
         .header-cont {
-            margin: 0 16px;
-            display: flex;
+           
             align-items: center;
-            justify-content: space-between;    
+            
         align-items: center;
         }
         .contacts-list {
@@ -1552,6 +1551,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         margin-bottom: 48px;
      }
      .hero {
+        max-width: 1440px;
         margin:0 auto;
         padding: 188px 0;
         height: 600px;
@@ -1648,6 +1648,7 @@ padding: 120px 0;
     }
     .subscribe {
         width: 100%;
+        margin-top: 0;
     }
     }
 
